@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{109453CB-6B83-DBFC-6629-887E39D287B6}</ProjectGuid>
+    <ProjectGuid>{2F84BA9A-C681-8255-1F3D-09CE9B45E519}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.TestTools.CodeCoverage.Editor</AssemblyName>
@@ -966,31 +966,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{E8BAC993-8E29-E0A7-4876-18C3DB4027BD}</Project>
+      <Project>{860D2831-D2F7-00A6-CC13-AC5A5E42C98A}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{A4A5E7EF-C00D-788F-BD84-261593837CA8}</Project>
+      <Project>{1AED6E31-59AB-B05C-3BED-F49484C879F5}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{3342EF68-BD85-5C96-EB64-407E84D94103}</Project>
+      <Project>{FA614F6D-73B5-750F-BB3F-7B2271401720}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{2DBE6937-DE23-B196-1915-3D073EE17EC1}</Project>
+      <Project>{E5E75D5C-1F47-751B-7DB8-1EFA486039E2}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Settings.Editor.csproj">
-      <Project>{14449115-D5F1-3DAD-12BA-165F158B2AC1}</Project>
+      <Project>{ED68B872-788E-88D7-3C2D-744101A047A2}</Project>
       <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{78830943-1549-2519-D7B3-EB9335AD51CE}</Project>
+      <Project>{66DAC046-EBB2-18DB-69C5-2213071B9F2C}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{354B31C4-968E-ECFE-C3ED-A2D958C74530}</Project>
+      <Project>{0A67876F-1A97-A2D6-5BD1-5409F426AE30}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -11,6 +11,9 @@ using UnityEngine;
 public class EEGTriggerHandler : MonoBehaviour
 {
     private static TcpClient socketConnection;
+
+    private static EEGTriggerHandler _instance;
+    public static EEGTriggerHandler Instance => _instance;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,18 +29,30 @@ public class EEGTriggerHandler : MonoBehaviour
         }
     }
 
+
+    //  X00 = condition calculated here
+    //  2 2D, 3 3D, 4 cog2D, 6 cog3D
+    // X0 = embodiment passed in
+    // 1 = non, 2 = emb
+    //  0X = event passed in
+    //  1 start, 2 trial end,  9 end con 
     public static void SendTrigger(int eventId)
     {
+        //add condition
+        eventId += (GlobalVariables.conD * GlobalVariables.conCog) * 100;
+        print("EVENT: " + eventId);
+
         if (socketConnection == null) return; // no openvibe connection
 
+  
         var stream = socketConnection.GetStream();
 
         if (!stream.CanWrite) return;
 
-        int finalId =  0;
+       // int finalId =  0;
 
         var buffer = BitConverter.GetBytes((ulong)0);
-        var eventTag = BitConverter.GetBytes((ulong)finalId);
+        var eventTag = BitConverter.GetBytes((ulong)eventId);
 
         var sendArray = buffer.Concat(eventTag.Concat(buffer)).ToArray();
         stream.Write(sendArray, 0, sendArray.Length);

@@ -1,0 +1,10 @@
+1,2,Aether&Duranium
+2,2,Aether&Kyber
+3,2,Aether&Ruinite
+4,2,Aether&Silverstone
+5,2,Duranium&Kyber
+6,2,Duranium&Ruinite
+7,2,Duranium&Silverstone
+8,2,Kyber&Ruinite
+9,2,Kyber&Silverstone
+10,2,Ruinite&Silverstone

@@ -1,0 +1,5 @@
+ID,Embodied,Cog,Dimension,FileNum,Expected,TrialNum,Result,Correct,ResponseTime
+4,non,1,2,1,Aether&Duranium,1,Aether&Duranium,True,19.3026
+4,non,1,2,2,Aether&Duranium,2,Duranium&Silverstone,False,24.39859
+4,non,1,2,3,Aether&Kyber,3,Aether&Duranium,False,14.70548
+4,non,1,2,4,Aether&Kyber,4,Ruinite&Silverstone,False,3.707628

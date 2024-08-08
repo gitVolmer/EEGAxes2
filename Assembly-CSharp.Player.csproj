@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1B5B6361-94C6-F429-0B9A-BE78FDF965BA}</ProjectGuid>
+    <ProjectGuid>{D9F0832D-7EAE-ECC1-0EBE-E81715EE0D31}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PhysInfo.cs" />
     <Compile Include="Assets\Scripts\NodeMenu.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\CowController.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\KeyboardSceneManager.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshUI.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\CustomHands\Scripts\HandPose.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\InteractableTool.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\VectorUtil.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\Menu\ColorSaturationBrightnessPicker.cs" />
     <Compile Include="Assets\Scripts\EEGManager\GlobalVariables.cs" />
+    <Compile Include="Assets\Scripts\ToggleSelector.cs" />
     <Compile Include="Assets\Scripts\DataExtrator.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\PauseOnInputLoss.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\InteractableToolsCreator.cs" />
@@ -147,7 +149,9 @@
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportPoint.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\FingerTipPokeTool.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\Cameras\SmoothFollow.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\Test.cs" />
     <Compile Include="Assets\Scripts\PalmMenu.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\TrialSceneManager.cs" />
     <Compile Include="Assets\Scripts\GraphSlider.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\View\SPView.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\DataBinding\DataObjectMetadata.cs" />
@@ -160,6 +164,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\ButtonDownListener.cs" />
     <Compile Include="Assets\Scripts\yeoez\PhysicsButton.cs" />
     <Compile Include="Assets\Scripts\yeoez\BillboardBehaviour.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\EmbodiedSceneManager.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandlerLaser.cs" />
     <Compile Include="Assets\Scripts\DataPoint.cs" />
     <Compile Include="Assets\Scripts\EEGManager\KeyboardEvents.cs" />
@@ -178,8 +183,10 @@
     <Compile Include="Assets\ScatterPlotAssets\Scripts\SBrushingAndLinking.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\SelectionCylinder.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\TrialWriter.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\PanelHMDFollower.cs" />
     <Compile Include="Assets\Scripts\EdgeCreator.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\AxisListToggle.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\AppDeeplink\AppDeeplinkUI.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\DebugUI\DebugUISample.cs" />
@@ -248,6 +255,7 @@
     <Compile Include="Assets\ScatterPlotAssets\Scripts\DataBinding\DataObject.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\Entities\AxisRangeWidget.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\OVROverlay\Scripts\OVROverlaySample.cs" />
+    <Compile Include="Assets\Scripts\EEGManager\QuestionHandler.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandler.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughStyler.cs" />
     <Compile Include="Assets\Scripts\VRige_Graph_Creator.cs" />
@@ -256,7 +264,6 @@
     <Compile Include="Assets\Scripts\cass-testing\NodeGrabbable.cs" />
     <Compile Include="Assets\ScatterPlotAssets\Scripts\View\LinkedVisualisations.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrackSegment.cs" />
-    <Compile Include="Assets\Scripts\EEGManager\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ScatterPlotAssets\Shaders\SolidColor.shader" />
@@ -898,91 +905,91 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.Interaction.Samples.Player.csproj">
-      <Project>{436A1737-3D4F-5EDD-EAA2-C4FDE7010E34}</Project>
+      <Project>{3E31A843-F4B3-E7A4-6C6D-7A499E5F194F}</Project>
       <Name>Oculus.Interaction.Samples.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Platform.Player.csproj">
-      <Project>{3F3F1703-3FDE-C762-D113-4FA3FBC5B32C}</Project>
+      <Project>{6B0A8484-CA09-C307-ABFC-CAB10386AB86}</Project>
       <Name>Oculus.Platform.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Voice.Demo.Player.csproj">
-      <Project>{3C6AD16C-0007-1B44-FAE2-DED2A5C7BF62}</Project>
+      <Project>{A914FEDD-7629-DDBD-56CC-F015B39D8B64}</Project>
       <Name>Oculus.Voice.Demo.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.AudioManager.Player.csproj">
-      <Project>{53A57ECB-ABA1-7DBE-A219-7B309F3F99AD}</Project>
+      <Project>{63CCE3A8-4FB3-2C00-1AFC-4E50ED46D034}</Project>
       <Name>Oculus.AudioManager.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{6844E41C-367B-7E10-4AE8-B83491567CC5}</Project>
+      <Project>{3FB4CC57-4634-8940-0A5F-B5CBDDE2A68D}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{0172ED61-FD27-C422-B70F-BB8CBB35F3B8}</Project>
+      <Project>{368D44E5-A09F-618A-422D-DA0A8153FD0E}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="AssistantCoreSDKRuntime.Player.csproj">
-      <Project>{421BD77C-9DAE-FC4D-6677-D05AAC3BA05B}</Project>
+      <Project>{DD6CF6C0-EE24-8010-B239-B9960B5E5394}</Project>
       <Name>AssistantCoreSDKRuntime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Spatializer.Player.csproj">
-      <Project>{AEE1B1B4-F2D9-000A-996B-96551746D350}</Project>
+      <Project>{05103425-260F-9A77-CCDD-A9E01F5539B9}</Project>
       <Name>Oculus.Spatializer.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.Player.csproj">
-      <Project>{F2E5BC4C-5484-1377-27E9-1E096FA6DE59}</Project>
+      <Project>{915C9273-3E7B-1F1A-2691-0B7F8BB34E79}</Project>
       <Name>Oculus.Interaction.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Subsystem.Registration.Player.csproj">
-      <Project>{BF86DF2C-AFBB-3165-DDD1-38CBE7E20A00}</Project>
+      <Project>{83A6A69C-9D30-729C-8AB6-F80F1ABFA0FE}</Project>
       <Name>Unity.Subsystem.Registration.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{C01D7C37-5BD6-B087-054E-12A1DFC1EF46}</Project>
+      <Project>{3D924CB9-40B9-A79E-7737-BA86BD2556F8}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{8779DC8F-4703-4424-02B8-CCCC45A3FEA6}</Project>
+      <Project>{725E5B9E-2D55-91A1-165B-0986C4F987EE}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.SpatialTracking.Player.csproj">
-      <Project>{694654C9-A5DD-446E-C9B6-3222E8CAA9B9}</Project>
+      <Project>{33916DDF-63EE-8F3E-6062-CF74F07EE863}</Project>
       <Name>UnityEngine.SpatialTracking.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.WitAI.Player.csproj">
-      <Project>{3AC9F2B3-1577-78AB-6D0E-06D3604D3444}</Project>
+      <Project>{80CCE4D0-D9A5-B296-681F-F71B4C8AEEB0}</Project>
       <Name>Facebook.WitAI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{4732E1C0-9F11-9565-C6CB-71EFCEDC48B6}</Project>
+      <Project>{205F6A3D-70E2-8B49-1B8A-67F8FF3CE07B}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.Player.csproj">
-      <Project>{4FC9A138-A26B-F592-D272-B6C04B4CFB99}</Project>
+      <Project>{59CF6603-8F31-7565-9F21-FF33221A2AB7}</Project>
       <Name>UnityEngine.XR.LegacyInputHelpers.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Player.csproj">
-      <Project>{788E0162-8A5D-A1E5-A6D6-E0F1737644A8}</Project>
+      <Project>{2712C545-2194-8A2B-E50D-F6C073D1773F}</Project>
       <Name>Oculus.VR.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Player.csproj">
-      <Project>{61EDA629-3A23-5DBA-5403-D0BB8F024BFC}</Project>
+      <Project>{3D0D8258-4488-87A5-B37F-BDBD241FB52B}</Project>
       <Name>Unity.XR.Management.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.LipSync.Player.csproj">
-      <Project>{3743B938-EAC9-EC01-AB74-0C17D6013975}</Project>
+      <Project>{AB1FBB8A-DC39-D6D3-2B73-37F58191825C}</Project>
       <Name>Oculus.LipSync.Player</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.Player.csproj">
-      <Project>{902059DB-608D-B060-8846-D5A06BE33DDA}</Project>
+      <Project>{F5FF84F8-2AC1-EFAB-A6E5-3A425C2D9D78}</Project>
       <Name>VoiceSDK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Oculus.Player.csproj">
-      <Project>{9D9EE94C-8936-39F6-D96B-6D8C7DFFA4A6}</Project>
+      <Project>{207A1895-F109-5DA7-9230-6690E91D3E6C}</Project>
       <Name>Unity.XR.Oculus.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{59F2377A-D36F-27DA-2B1D-2D07A1198562}</Project>
+      <Project>{42F5E45D-AAE9-7E66-0E15-F9C9AC913745}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
   </ItemGroup>

@@ -264,7 +264,7 @@ public class Visualization : MonoBehaviour, SGrabbable, Brushable
 
     public void ShowHistogram(bool hide)
     {
-        histogramObject.SetActive(hide);
+       // histogramObject.SetActive(hide);   // #2023 removing histogram visualizations
     }
 
     public void AddAxis(SAxis axis)
@@ -292,9 +292,11 @@ public class Visualization : MonoBehaviour, SGrabbable, Brushable
                 break;
             case 2:
                 newType = ViewType.Scatterplot2D;
+                this.GetComponent<Collider>().enabled = true; // only allow visualization collider to be active in 2D or 3D scatter
                 break;
             case 3:
                 newType = ViewType.Scatterplot3D;
+                this.GetComponent<Collider>().enabled = true; // only allow visualization collider to be active in 2D or 3D scatter
                 break;
 
             default:
@@ -307,7 +309,7 @@ public class Visualization : MonoBehaviour, SGrabbable, Brushable
             switch (viewType)
             {
                 case ViewType.Histogram:
-                    EnableVisualizationObject(histogramObject);
+                    // EnableVisualizationObject(histogramObject); // #2023 disabled histogram viewing
                     break;
                 case ViewType.Scatterplot2D:
                     EnableVisualizationObject(scatterplot2DObject);

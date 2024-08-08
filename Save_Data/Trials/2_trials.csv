@@ -1,0 +1,22 @@
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+2,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,6.909818
+2,non,2,correlation,Seastone&Space Titanium,2,Seastone&Space Titanium,True,19.06505
+2,non,2,correlation,Seastone&Space Titanium,3,Seastone&Space Titanium,True,25.3054
+2,non,2,correlation,Seastone&Space Titanium,4,Seastone&Space Titanium,True,26.30689
+2,non,2,correlation,Seastone&Space Titanium,5,Seastone&Space Titanium,True,27.19794
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+2,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,7.99491
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+2,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,7.272901
+2,non,2,correlation,Seastone&Space Titanium,2,Space Titanium&Valkyrium,False,14.62289
+2,non,2,correlation,Seastone&Space Titanium,3,Space Titanium&Valkyrium,False,23.00447
+2,non,2,correlation,Seastone&Space Titanium,4,Space Titanium&Valkyrium,False,23.82479
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+2,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,4.403009
+2,non,2,correlation,Seastone&Space Titanium,2,Bonnevillium&Seastone,False,6.129768
+2,non,2,correlation,Seastone&Space Titanium,3,Orichalcum&Seastone,False,5.569607
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+2,non,2,correlation,Horonium&Radianite,1,Administratium&Afraidium,False,4.306633
+2,non,2,correlation,Seastone&Space Titanium,2,Space Titanium&Valkyrium,False,3.271977
+ID,Embodied,Cog,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Cog,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime

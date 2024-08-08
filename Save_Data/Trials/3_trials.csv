@@ -1,0 +1,113 @@
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Afraidium&Versamina,False,14.98316
+3,non,2,correlation,Seastone&Space Titanium,2,Bonnevillium&Seastone,False,10.80398
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,78.29482
+3,non,2,correlation,Seastone&Space Titanium,2,Seastone&Space Titanium,True,22.96037
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,emb,2,correlation,Divinium (E115)&Silverstone,3,Divinium (E115)&Silverstone,True,27.17397
+3,emb,2,correlation,Aether&Hihiirokane,4,Aether&Hihiirokane,True,20.38635
+3,emb,3,correlation,Eridium&Harbenite&Scrith,5,Eridium&Scrith,False,42.71971
+3,emb,3,correlation,Celestial Bronze&Supermanium&The Core,6,Celestial Bronze&Supermanium&The Core,True,30.13903
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,3,correlation,Arenak&Duranium&Jerktonium,7,Arenak&Duranium&Jerktonium,True,44.66945
+3,non,3,correlation,Corrodium&RadiumX&Redstone,8,Corrodium&RadiumX&Redstone,True,42.39979
+3,non,3,correlation,Corrodium&RadiumX&Redstone,9,Corrodium&RadiumX&Redstone,True,45.60193
+3,non,3,correlation,Corrodium&RadiumX&Redstone,10,Corrodium&RadiumX&Redstone,True,46.16019
+3,non,3,correlation,Corrodium&RadiumX&Redstone,11,Corrodium&RadiumX&Redstone,True,46.67463
+3,non,3,correlation,Corrodium&RadiumX&Redstone,12,Corrodium&RadiumX&Redstone,True,47.20387
+3,non,3,correlation,Corrodium&RadiumX&Redstone,13,Corrodium&RadiumX&Redstone,True,48.5819
+3,non,3,correlation,Corrodium&RadiumX&Redstone,14,Corrodium&RadiumX&Redstone,True,50.11436
+3,non,3,correlation,Corrodium&RadiumX&Redstone,15,Corrodium&RadiumX&Redstone,True,50.36478
+3,non,3,correlation,Corrodium&RadiumX&Redstone,16,Corrodium&RadiumX&Redstone,True,50.54573
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Administratium&Afraidium,False,103.8145
+3,non,3,correlation,Seastone&Space Titanium,2,Orichalcum&Space Titanium,False,6.742508
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Administratium,False,22.4565
+3,non,3,correlation,Seastone&Space Titanium,2,Orichalcum,False,3.515192
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,4.057347
+3,non,3,correlation,Seastone&Space Titanium,2,Space Titanium,False,2.654922
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,24.23782
+3,non,3,correlation,Seastone&Space Titanium,2,,False,7.667174
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,10.51145
+3,non,3,correlation,Seastone&Space Titanium,2,,False,7.072383
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Radianite,False,9.872071
+3,non,2,correlation,Seastone&Space Titanium,2,,False,2.588086
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,14.74744
+3,non,2,correlation,Seastone&Space Titanium,2,,False,2.367882
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,3.231296
+3,non,2,correlation,Seastone&Space Titanium,2,,False,2.285064
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,2.494967
+3,non,2,correlation,Seastone&Space Titanium,2,,False,4.681424
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,3.747138
+3,non,2,correlation,Seastone&Space Titanium,2,,False,4.357525
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,3.052265
+3,non,2,correlation,Seastone&Space Titanium,2,,False,1.615679
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,emb,2,correlation,Divinium (E115)&Silverstone,3,Divinium (E115)&Silverstone,True,23.04775
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,,False,12.48828
+3,non,2,correlation,Seastone&Space Titanium,2,Orichalcum,False,15.09855
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,emb,2,correlation,Divinium (E115)&Silverstone,3,,False,19.4056
+3,emb,2,correlation,Aether&Hihiirokane,4,,False,17.90425
+3,emb,3,correlation,Eridium&Harbenite&Scrith,5,,False,6.83557
+3,emb,3,correlation,Celestial Bronze&Supermanium&The Core,6,,False,0
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,60.63765
+3,non,2,correlation,Seastone&Space Titanium,2,Seastone&Space Titanium,True,83.44575
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,emb,2,correlation,Divinium (E115)&Silverstone,3,Divinium (E115)&Silverstone,True,49.68193
+3,emb,2,correlation,Aether&Hihiirokane,4,Aether&Hihiirokane,True,16.44587
+3,emb,3,correlation,Eridium&Harbenite&Scrith,5,Arsonium&Atium&Eridium,False,149.9751
+3,emb,3,correlation,Celestial Bronze&Supermanium&The Core,6,,False,5.126539
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Afraidium&Versamina,False,13.17353
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,non,2,correlation,Horonium&Radianite,1,Afraidium&Versamina,False,7.696734
+3,non,2,correlation,Seastone&Space Titanium,2,Bonnevillium&Seastone,False,3.101153
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+3,emb,2,correlation,Divinium (E115)&Silverstone,3,Divinium (E115)&Taydenite,False,37.71133
+3,emb,2,correlation,Aether&Hihiirokane,4,Collapsium&Phostlite,False,1.834407
+3,emb,3,correlation,Eridium&Harbenite&Scrith,5,Arsonium&Eridium&Scrith,False,10.52973
+3,emb,3,correlation,Celestial Bronze&Supermanium&The Core,6,Celestial Bronze&Supermanium&The Core,True,2.234638
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime

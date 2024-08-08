@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{902059DB-608D-B060-8846-D5A06BE33DDA}</ProjectGuid>
+    <ProjectGuid>{F5FF84F8-2AC1-EFAB-A6E5-3A425C2D9D78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VoiceSDK.Runtime</AssemblyName>
@@ -632,15 +632,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AssistantCoreSDKRuntime.Player.csproj">
-      <Project>{421BD77C-9DAE-FC4D-6677-D05AAC3BA05B}</Project>
+      <Project>{DD6CF6C0-EE24-8010-B239-B9960B5E5394}</Project>
       <Name>AssistantCoreSDKRuntime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Facebook.WitAI.Player.csproj">
-      <Project>{3AC9F2B3-1577-78AB-6D0E-06D3604D3444}</Project>
+      <Project>{80CCE4D0-D9A5-B296-681F-F71B4C8AEEB0}</Project>
       <Name>Facebook.WitAI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{8779DC8F-4703-4424-02B8-CCCC45A3FEA6}</Project>
+      <Project>{725E5B9E-2D55-91A1-165B-0986C4F987EE}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

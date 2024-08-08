@@ -1,0 +1,9 @@
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+5,emb,2,correlation,Aether&Hihiirokane,1,,False,20.88863
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+5,emb,2,correlation,Aether&Hihiirokane,1,Aether&Hihiirokane,True,71.45399
+5,emb,3,correlation,Eridium&Harbenite&Scrith,2,,False,112.0318
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime

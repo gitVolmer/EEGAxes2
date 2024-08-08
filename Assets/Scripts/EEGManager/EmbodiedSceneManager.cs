@@ -9,7 +9,7 @@ public class EmbodiedSceneManager : MonoBehaviour
     public GameObject trialStartView;
     public float timeTaken;
 
-    private bool _trialStarted;        
+    private bool _trialStarted = false;        
     private static EmbodiedSceneManager _instance;
     public static EmbodiedSceneManager Instance => _instance;
 
@@ -24,6 +24,7 @@ public class EmbodiedSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // eeg send condition start trigger
         _allGraphs = ScatterPlotSceneManager.Instance.SpawnAllGraphs(1);
     }
 
@@ -33,19 +34,39 @@ public class EmbodiedSceneManager : MonoBehaviour
         if(_trialStarted)
             timeTaken += Time.deltaTime;
 
+        // start trial
         if(_trialStarted != true && OVRInput.Get(OVRInput.Button.Four))
         {
-            _trialStarted = true;
-            trialStartView.gameObject.SetActive(false);
+            TrialStart();
+            //_allGraphs = ScatterPlotSceneManager.Instance.SpawnAllGraphs(1);
+            //_trialStarted = true;
+            //trialStartView.gameObject.SetActive(false);
+            // #eeg send start condition
         }
+        // trial ended
+        //else if(!_trialStarted && !trialStartView.gameObject.active)
+        //{
+        //  //  TrialEnd();
+        //}
+    }
+
+    private void TrialStart()
+    {
+        //eeg send start trial
+        _trialStarted = true;
+        trialStartView.gameObject.SetActive(false);
+        print("TRIAL STARTED CHECK");
+        EEGTriggerHandler.SendTrigger(21);
+
     }
 
     public void ResetScene()
     {
-        _trialStarted = false;
-        trialStartView.gameObject.SetActive(true);
-        DestroyAllAxes();
+        ScatterPlotSceneManager.Instance.LoadData(GlobalVariables.activeTrial.fileID);
         _allGraphs = ScatterPlotSceneManager.Instance.SpawnAllGraphs(1);
+        // _trialStarted = false;
+        // trialStartView.gameObject.SetActive(true);
+        timeTaken = 0;
     }
 
     private void DestroyAllAxes()
@@ -60,4 +81,21 @@ public class EmbodiedSceneManager : MonoBehaviour
         //     Destroy(axis.gameObject);
         // }
     }
+
+    public void TrialEnd()
+    {
+        EEGTriggerHandler.SendTrigger(22);
+        //_trialStarted = false;
+        // eeg send trial end
+        DestroyAllAxes();
+        //  trialStartView.gameObject.SetActive(true);  // if we want the break screen appearing
+        // read next dataset and spawn when UI is hiding
+        timeTaken = 0;
+        ScatterPlotSceneManager.Instance.LoadData(GlobalVariables.activeTrial.fileID);
+        _allGraphs = ScatterPlotSceneManager.Instance.SpawnAllGraphs(1);
+     
+
+    }
+
+    
 }

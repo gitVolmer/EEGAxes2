@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{694654C9-A5DD-446E-C9B6-3222E8CAA9B9}</ProjectGuid>
+    <ProjectGuid>{33916DDF-63EE-8F3E-6062-CF74F07EE863}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.SpatialTracking</AssemblyName>
@@ -628,7 +628,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{8779DC8F-4703-4424-02B8-CCCC45A3FEA6}</Project>
+      <Project>{725E5B9E-2D55-91A1-165B-0986C4F987EE}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

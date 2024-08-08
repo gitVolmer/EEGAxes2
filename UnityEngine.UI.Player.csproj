@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8779DC8F-4703-4424-02B8-CCCC45A3FEA6}</ProjectGuid>
+    <ProjectGuid>{725E5B9E-2D55-91A1-165B-0986C4F987EE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.UI</AssemblyName>
@@ -58,9 +58,9 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\RawImage.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Image.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Toggle.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\VerticalLayoutGroup.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Text.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Toggle.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\GraphicRaycaster.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\UIElements\PanelRaycaster.cs" />
     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\LayoutElement.cs" />

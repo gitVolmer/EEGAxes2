@@ -435,6 +435,19 @@ public class SAxis : MonoBehaviour, SGrabbable {
                 var haxis = visu.ReferenceAxis1.horizontal;
                 var vaxis = visu.ReferenceAxis1.vertical;
 
+
+                //print("PRE" + haxis.transform.rotation);
+                //var rotationz = Quaternion.LookRotation(GameObject.Find("CenterEyeAnchor").transform.position);
+                //rotationz *= Quaternion.Euler(0, 90, 0); // this adds a 90 degrees Y rotation
+                //haxis.transform.rotation = rotationz;
+                //vaxis.transform.rotation = rotationz;
+
+
+
+                ////haxis.transform.rotation *= Quaternion.Euler(0, 150, 0);
+                //haxis.transform.Rotate(0, -90f, 0);
+                //print("POST " + haxis.transform.rotation);
+
                 var vu = vaxis.Up;
                 var hu = haxis.Up;
 
@@ -442,6 +455,7 @@ public class SAxis : MonoBehaviour, SGrabbable {
 
                 var q1 = Quaternion.LookRotation(-Vector3.Cross(vu, hu), vu);
                 var q2 = Quaternion.LookRotation(Vector3.Cross(vu, hu), hu);
+
 
                 // find out which direction the horizontal is facing
                 var urvec = Vector3.Cross(-Vector3.Cross(vu, hu), vu);
@@ -481,9 +495,11 @@ public class SAxis : MonoBehaviour, SGrabbable {
                         -vu * vaxis.transform.localScale.y * 0.5f +
                         du * daxis.transform.localScale.y * 0.5f;
 
+                    
                     vaxis.AnimateTo(vaxis.transform.position, q1);
                     haxis.AnimateTo(hpos, q2);
-                    daxis.AnimateTo(dpos, q3);                    
+                    daxis.AnimateTo(dpos, q3);
+
                 }
             }
         } // end for each 

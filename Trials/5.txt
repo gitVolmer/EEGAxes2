@@ -1,0 +1,8 @@
+emb,2,correlation,Aether&Hihiirokane,4
+emb,3,correlation,Eridium&Harbenite&Scrith,6
+non,2,correlation,Horonium&Radianite,1
+non,2,correlation,Seastone&Space Titanium,2
+emb,2,correlation,Divinium (E115)&Silverstone,3
+emb,3,correlation,Celestial Bronze&Supermanium&The Core,7
+non,3,correlation,Arenak&Duranium&Jerktonium,8
+non,3,correlation,Corrodium&RadiumX&Redstone,9

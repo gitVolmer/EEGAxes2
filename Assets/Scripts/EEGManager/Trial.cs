@@ -5,12 +5,19 @@ using UnityEngine;
 public class Trial
 {
     /// <summary> embodied condition: emb / non </summary>
-    public string embodiment;
+    //public string embodiment;
+    /// <summary> cognitive condition 1 / 2  (no cog, cognitive question asked) </summary>
+    //public int cog;
     /// <summary> graph dimension: 0 / 2 / 3 </summary>
-    public int dimension;
+    //public int dimension;
     /// <summary> experiment task: correlation / outlier</summary>
-    public string task;
-    /// <summary> expected answer: vlow, low, med, high, vhigh</summary>
+    //public string task;
+
+
+    /// <summary> the dataset file id we should read from for this trial</summary>
+    public int fileID;
+
+    /// <summary> expected answer: vlow, low, med, high, vhigh OR based on the data dimensions</summary>
     public string expected;
 
 
@@ -21,16 +28,16 @@ public class Trial
     /// <param name="dimension"></param>
     /// <param name="task"></param>
     /// <param name="expected"></param>
-    public Trial(string embodiment, int dimension, string task, string expected)
+    public Trial(int fileID, string expected)
     {
-        this.embodiment = embodiment;
-        this.dimension = dimension;
-        this.task = task;
+        this.fileID = fileID;
         this.expected = expected;
+
+
     }
 
     public override string ToString()
     {
-        return "Embodiment: " + embodiment + ", Dimension: " + dimension + ", Task: " + task + ", Expected: " + expected;
+        return "FileID: " + fileID + ", Expected: " + expected;
     }
 }

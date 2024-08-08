@@ -21,9 +21,9 @@ public class TrialWriter : MonoBehaviour
     /// </summary>
     public void CreateOrOpenTrialFile()
     {
-        savePath = "./Save_Data/Trials/" + GlobalVariables.pID + "_trials.csv ";
+        savePath = "./Save_Data/Trials/" + GlobalVariables.pID + "_" + GlobalVariables.sesID + "_trials.csv ";
         trialTW = new StreamWriter(savePath, append: true);
-        trialTW.WriteLine("ID,Embodied,Dimension,Task,Expected," +  // obtained from global data
+        trialTW.WriteLine("ID,Embodied,Cog,Dimension,FileNum,Expected," +  // obtained from global data
             "TrialNum,Result,Correct,ResponseTime");  // passed in data
     }
 
@@ -40,9 +40,10 @@ public class TrialWriter : MonoBehaviour
     {
         var correctResult = GlobalVariables.activeTrial.expected == result;
         trialTW.WriteLine(GlobalVariables.pID + "," +
-            GlobalVariables.activeTrial.embodiment + "," +
-            GlobalVariables.activeTrial.dimension + "," +
-            GlobalVariables.activeTrial.task + "," +
+            GlobalVariables.conEmb + "," +
+            GlobalVariables.conCog + "," +
+            GlobalVariables.conD + "," +
+            GlobalVariables.activeTrial.fileID + "," +
             GlobalVariables.activeTrial.expected + "," +
             tNum + "," +
             result + "," +

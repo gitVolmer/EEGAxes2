@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F2E5BC4C-5484-1377-27E9-1E096FA6DE59}</ProjectGuid>
+    <ProjectGuid>{915C9273-3E7B-1F1A-2691-0B7F8BB34E79}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Oculus.Interaction</AssemblyName>
@@ -349,8 +349,8 @@
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\ICandidateComparer.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Input\OVRIntegration\FromOVRControllerHandDataSource.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\ProximityField\IProximityField.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\InteractableRegistry.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Input\OVRIntegration\TrackingToWorldTransformerOVR.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\InteractableRegistry.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Unity\CanvasMeshPointable.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\MaterialProperties\MaterialPropertyBlockEditor.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Movements\IMovement.cs" />
@@ -949,15 +949,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.Player.csproj">
-      <Project>{788E0162-8A5D-A1E5-A6D6-E0F1737644A8}</Project>
+      <Project>{2712C545-2194-8A2B-E50D-F6C073D1773F}</Project>
       <Name>Oculus.VR.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{0172ED61-FD27-C422-B70F-BB8CBB35F3B8}</Project>
+      <Project>{368D44E5-A09F-618A-422D-DA0A8153FD0E}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{8779DC8F-4703-4424-02B8-CCCC45A3FEA6}</Project>
+      <Project>{725E5B9E-2D55-91A1-165B-0986C4F987EE}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

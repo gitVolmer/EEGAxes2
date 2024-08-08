@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using EEGManager;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -43,6 +44,7 @@ public class ScatterPlotSceneManager : MonoBehaviour
 
     private void Awake()
     {
+        LoadData(GlobalVariables.activeTrial.fileID);
         if(_instance != null && _instance != this) Destroy(this);
         else _instance = this;
         sceneAxes = new List<SAxis>();
@@ -77,7 +79,7 @@ public class ScatterPlotSceneManager : MonoBehaviour
             // displays all axes on the scene if true
             if (generateAll)
             {
-                Vector3 v = new Vector3(origin.position.x + (i % 7) * 0.35f, origin.position.y - (i / 7) / 2f, 0.5f);// -0.4875801f);
+                Vector3 v = new Vector3(origin.position.x + (i % 3) * 0.35f, origin.position.y - (i / 3) / 2f, 0.5f);// -0.4875801f);
                 GameObject obj = (GameObject)Instantiate(axisPrefab);
                 obj.transform.position = v;
                 SAxis axis = obj.GetComponent<SAxis>();
@@ -109,7 +111,8 @@ public class ScatterPlotSceneManager : MonoBehaviour
         allAxes = new List<SAxis>();
         for (int i = 0; i < dataObject.Identifiers.Length; ++i)
         {
-            Vector3 v = new Vector3(origin.position.x + (i % 7) * 0.35f, position - (i / 7) / 2f, origin.position.z);// -0.4875801f);
+            Vector3 v =  new Vector3((origin.position.x + (i % 3) * 0.35f) + .3f, position - (i / 3) / 3f, origin.position.z - 0.2f);// -0.4875801f);
+           //  new Vector3(position - (i / 7) / 2f, origin.position.y + (i % 7) * 0.2f, origin.position.z);   // maybe flip?
             GameObject obj = (GameObject)Instantiate(axisPrefab);
             obj.transform.position = v;
             SAxis axis = obj.GetComponent<SAxis>();
@@ -158,10 +161,22 @@ public class ScatterPlotSceneManager : MonoBehaviour
         return axis;
     }
     
-    public List<SAxis> SpawnGraph(int idx, int idy, Vector3 location, string name)
+    public List<SAxis> SpawnGraph(int idx, int idy, Vector3 location, string name, GameObject parentO = null)
     {
-        SAxis yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false); // Vertical axis
-        SAxis xAxis = GenerateAxis(idy, location, Quaternion.Euler(180, 0, -90), name, true); // Horizontal axis       
+
+        SAxis yAxis = null;
+        SAxis xAxis = null;
+        if (parentO != null)
+        {
+            yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false, parentO); // Vertical axis
+            xAxis = GenerateAxis(idy, location, Quaternion.Euler(180, 0, -90), name, true, parentO); // Horizontal axis  
+        }
+        else
+        {
+            yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false); // Vertical axis
+            xAxis = GenerateAxis(idy, location, Quaternion.Euler(180, 0, -90), name, true); // Horizontal axis  
+        }
+       
 
         List<SAxis> axis = new List<SAxis>();
         xAxis.axis = KeyboardSceneManager.Axis.X;
@@ -171,13 +186,31 @@ public class ScatterPlotSceneManager : MonoBehaviour
 
         return axis;
     }
-    
-    public List<SAxis> SpawnGraph3D(int idx, int idy, int idz, Vector3 location, string name)
+
+
+    public List<SAxis> SpawnGraph3D(int idx, int idy, int idz, Vector3 location, string name, GameObject parentO = null)
     {
+
+
+        //SAxis yAxis = null;
+        //SAxis xAxis = null;
+        //SAxis zAxis = null;
+        //if (parentO != null)
+        //{
+        //    yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false, parentO); // Vertical axis
+        //    xAxis = GenerateAxis(idy, location, Quaternion.Euler(180, 0, -90), name, true, parentO); // Horizontal axis  
+        //    zAxis = GenerateAxis(idz, new Vector3(location.x - 0.05f, location.y, location.z + 0.1f), Quaternion.Euler(180, -45, -90), name, true, parentO); // Horizontal axis      
+        //}
+        //else
+        //{
+        //    yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false); // Vertical axis
+        //    xAxis = GenerateAxis(idy, location, Quaternion.Euler(180, 0, -90), name, true); // Horizontal axis  
+        //    zAxis = GenerateAxis(idz, new Vector3(location.x - 0.05f, location.y, location.z + 0.1f), Quaternion.Euler(180, -45, -90), name, true); // Horizontal axis      
+        //}
         SAxis yAxis = GenerateAxis(idx, location, Quaternion.Euler(0, 0, 0), name, false); // Vertical axis
         SAxis xAxis = GenerateAxis(idy, new Vector3(location.x - 0.05f, location.y, location.z - 0.1f), Quaternion.Euler(180, 45, -90), name, true); // Horizontal axis       
         SAxis zAxis = GenerateAxis(idz, new Vector3(location.x - 0.05f, location.y, location.z + 0.1f), Quaternion.Euler(180, -45, -90), name, true); // Horizontal axis      
-        
+        print(" idy : " + idx);
         List<SAxis> axis = new List<SAxis>();
         xAxis.axis = KeyboardSceneManager.Axis.X;
         axis.Add(xAxis);
@@ -185,17 +218,24 @@ public class ScatterPlotSceneManager : MonoBehaviour
         axis.Add(yAxis);
         zAxis.axis = KeyboardSceneManager.Axis.Z;
         axis.Add(zAxis);
-
         return axis;
     }
     
 
-   public SAxis GenerateAxis(int id, Vector3 location, Quaternion rotation, string nodeName, bool horizontal)
+   public SAxis GenerateAxis(int id, Vector3 location, Quaternion rotation, string nodeName, bool horizontal, GameObject parentO = null)
     {
         // id 1 is control attribute
-
+        GameObject obj = null;
+        if (parentO != null)
+        {
+            obj = (GameObject)Instantiate(axisPrefab, parentO.transform);
+        }
+        else
+        {
+            obj = (GameObject)Instantiate(axisPrefab);
+        }
         // Vertical Axis
-        GameObject obj = (GameObject)Instantiate(axisPrefab);
+
         float h = obj.GetComponent<BoxCollider>().size.y * obj.transform.localScale.y;
 
         if (horizontal) location = new Vector3(location.x + h / 2, location.y - h / 2, location.z);
@@ -354,5 +394,20 @@ public class ScatterPlotSceneManager : MonoBehaviour
 
         GameObject a = GameObject.Find("axis mpg");
         a.transform.position = new Vector3(0.236f, 1.506231f, -1.486f);
+    }
+
+
+    /// <summary>
+    /// Load the dataset based on an int id from the OreData folder
+    /// </summary>
+    /// <param name="fileNum"></param>
+    public void LoadData(int fileNum)
+    {
+        sourceData = Resources.Load<TextAsset>("OreData/" + fileNum);
+        
+        //sourceData = new TextAsset(".Assests/Resources/OreData/" + fileNum + "_data.csv");
+        dataObject = new DataBinding.DataObject(sourceData.text, metadata);
+
+        print("LOAD DATA: " + fileNum);
     }
 }

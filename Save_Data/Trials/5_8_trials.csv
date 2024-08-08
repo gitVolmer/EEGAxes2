@@ -1,0 +1,7 @@
+ID,Embodied,Cog,Dimension,FileNum,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Cog,Dimension,FileNum,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Cog,Dimension,FileNum,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Cog,Dimension,FileNum,Expected,TrialNum,Result,Correct,ResponseTime
+5,emb,2,3,21,Aether&Duranium&Kyber,1,Aether&Duranium&Kyber,True,30.1872
+5,emb,2,3,22,Aether&Duranium&Kyber,2,Aether&Duranium&Kyber,True,17.37625
+5,emb,2,3,23,Aether&Duranium&Runite,3,Aether&Duranium&Ruinite,False,42.06993

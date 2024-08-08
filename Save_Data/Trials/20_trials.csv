@@ -1,0 +1,8 @@
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+20,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,80.71918
+20,non,3,correlation,Arenak&Duranium&Jerktonium,2,Arenak&Duranium&Jerktonium,True,73.71513
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
+20,non,2,correlation,Horonium&Radianite,1,Horonium&Radianite,True,55.0836
+20,non,3,correlation,Arenak&Duranium&Jerktonium,2,Arenak&Duranium&Jerktonium,True,53.66174
+ID,Embodied,Dimension,Task,Expected,TrialNum,Result,Correct,ResponseTime
